@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.Select;
 
 public class SeleniumTest {
 
+    private WebDriver webDriver;
+
     @Before
     public void setup(){
         // TODO inicializar WebDriver
@@ -20,7 +22,7 @@ public class SeleniumTest {
     public void testMustFillOutTheTestFormWithYourData(){
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-        WebDriver webDriver = new ChromeDriver(options);
+        webDriver = new ChromeDriver(options);
         webDriver.navigate().to("http://toolsqa.com/automation-practice-form/");
 
         WebElement firstname = webDriver.findElement(By.name("firstname"));
