@@ -5,6 +5,7 @@ import com.cedaniel200.ejercicio2.pageobject.pages.FlightConfirmationPage;
 import com.cedaniel200.ejercicio2.pageobject.pages.FlightFinderPage;
 import com.cedaniel200.ejercicio2.pageobject.pages.SignonPage;
 import com.cedaniel200.ejercicio2.pageobject.pages.RegisterPage;
+import cucumber.api.PendingException;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -44,22 +45,21 @@ public class BayFlightStepDefinitions {
 
     @And("^I look for the flight$")
     public void lookForTheFlight() {
-        //throw new PendingException();
+        throw new PendingException();
     }
 
     @And("^I select the flight$")
     public void selectTheFlight() {
-        //throw new PendingException();
+        throw new PendingException();
     }
 
     @When("^I buy the flight$")
     public void buyTheFlight() {
-        //throw new PendingException();
+        throw new PendingException();
     }
 
     @Then("^you should see the Flight Confirmation$")
     public void shouldSeeTheFlightConfirmation() {
-        //throw new PendingException();
         assertThat(flightConfirmationPage.isFlightConfirmationVisible(), is(true));
     }
 
