@@ -7,6 +7,7 @@ public class FlightConfirmation implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
+        // TODO implementar
         return null;
     }
 }
