@@ -1,13 +1,11 @@
 package com.cedaniel200.ejercicio2.pageobject.pages;
 
-import com.cedaniel200.ejercicio2.pageobject.model.User;
 import net.serenitybdd.core.pages.PageObject;
+import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class SignonPage extends PageObject {
-
-    private static final String LOGIN_URL = "http://newtours.demoaut.com/mercurysignon.php";
 
     @FindBy(name = "userName")
     private WebElement username;
@@ -16,13 +14,19 @@ public class SignonPage extends PageObject {
     @FindBy(name = "login")
     private WebElement buttonLogin;
 
-    public void tryLogin(User user) {
-        enter(user.getUsername()).into(username);
-        enter(user.getPassword()).into(password);
+    @Step
+    public void enterIntoUsername(String username) {
+        enter(username).into(this.username);
+    }
+
+    @Step("Enter a password")
+    public void enterIntoPassword(String password) {
+        enter(password).into(this.password);
+    }
+
+    @Step
+    public void clickOnLoginButton() {
         clickOn(buttonLogin);
     }
 
-    public void goToLogin() {
-        openUrl(LOGIN_URL);
-    }
 }

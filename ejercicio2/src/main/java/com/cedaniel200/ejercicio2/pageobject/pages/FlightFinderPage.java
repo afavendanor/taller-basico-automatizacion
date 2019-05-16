@@ -14,4 +14,5 @@ public class FlightFinderPage extends PageObject {
     private WebElement passCount;
     // TODO mapea los elementos restantes
 
+    // TODO crear los métodos para interactuar con los elementos de la pagina
 }

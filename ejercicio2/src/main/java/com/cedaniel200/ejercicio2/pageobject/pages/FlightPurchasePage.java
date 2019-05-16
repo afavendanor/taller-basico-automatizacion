@@ -5,5 +5,5 @@ public class FlightPurchasePage {
 
     // TODO mapear los elementos
 
-    // TODO crear los metodos necesarios para comprar un vuelo
+    // TODO crear los métodos necesarios para interactuar con los elementos
 }

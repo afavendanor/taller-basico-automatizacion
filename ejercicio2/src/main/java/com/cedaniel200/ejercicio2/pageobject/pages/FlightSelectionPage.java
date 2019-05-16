@@ -4,5 +4,5 @@ package com.cedaniel200.ejercicio2.pageobject.pages;
 public class FlightSelectionPage {
     // TODO mapear los elementos
 
-    // TODO crear los metodos necesarios para seleccionar un vuelo
+    // TODO crear los métodos necesarios para interactuar con los elementos
 }

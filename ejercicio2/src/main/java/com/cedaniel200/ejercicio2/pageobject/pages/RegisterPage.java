@@ -1,13 +1,11 @@
 package com.cedaniel200.ejercicio2.pageobject.pages;
 
-import com.cedaniel200.ejercicio2.pageobject.model.User;
 import net.serenitybdd.core.pages.PageObject;
+import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class RegisterPage extends PageObject {
-
-    private static final String REGISTER_URL = "http://newtours.demoaut.com/mercuryregister.php";
 
     @FindBy(id = "email")
     private WebElement username;
@@ -18,14 +16,23 @@ public class RegisterPage extends PageObject {
     @FindBy(name = "register")
     private WebElement buttonRegister;
 
-    public void goToRegister(){
-        getDriver().navigate().to(REGISTER_URL);
+    @Step
+    public void enterIntoUsername(String username) {
+        enter(username).into(this.username);
     }
 
-    public void tryRegister(User user) {
-        enter(user.getUsername()).into(username);
-        enter(user.getPassword()).into(password);
-        enter(user.getPassword()).into(confirmPassword);
+    @Step("Enter a password")
+    public void enterIntoPassword(String password) {
+        enter(password).into(this.password);
+    }
+
+    @Step("Enter a confirm passwors")
+    public void enterIntoConfirmPassword(String confirmPassword) {
+        enter(confirmPassword).into(this.confirmPassword);
+    }
+
+    @Step
+    public void clickOnRegisterButton() {
         clickOn(buttonRegister);
     }
 
