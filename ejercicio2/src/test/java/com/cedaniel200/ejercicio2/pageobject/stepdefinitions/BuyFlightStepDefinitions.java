@@ -20,7 +20,7 @@ import static com.cedaniel200.ejercicio2.pageobject.model.UserBuilder.getUserByD
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
-public class BayFlightStepDefinitions {
+public class BuyFlightStepDefinitions {
 
     @Steps
     HomePage homePage;

@@ -6,8 +6,8 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
-@CucumberOptions(features = "src/test/resources/features/bay_flight.feature",
+@CucumberOptions(features = "src/test/resources/features/buy_flight.feature",
         glue = "com.cedaniel200.ejercicio2.pageobject.stepdefinitions",
         snippets = SnippetType.CAMELCASE)
-public class BayFlight {
+public class BuyFlight {
 }

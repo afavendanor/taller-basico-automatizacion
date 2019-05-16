@@ -1,7 +1,7 @@
-Feature: Bay flight
+Feature: Buy flight
   As a user, I want to buy a flight to relax on my vacations.
 
-  Scenario: Bay flight
+  Scenario: Buy flight
     Given I authenticate myself
     And I look for the flight
     And I select the flight
