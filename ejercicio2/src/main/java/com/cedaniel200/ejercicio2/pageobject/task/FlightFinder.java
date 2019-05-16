@@ -5,7 +5,7 @@ import net.thucydides.core.annotations.Steps;
 
 public class FlightFinder {
     @Steps
-    FlightFinderPage finderPage;
+    FlightFinderPage flightFinderPage;
 
     public void searchFlights(){
         // TODO implementar este método

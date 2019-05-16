@@ -1,7 +1,11 @@
 package com.cedaniel200.ejercicio2.pageobject.stepdefinitions;
 
 import com.cedaniel200.ejercicio2.pageobject.model.User;
-import com.cedaniel200.ejercicio2.pageobject.pages.*;
+import com.cedaniel200.ejercicio2.pageobject.pages.FlightConfirmationPage;
+import com.cedaniel200.ejercicio2.pageobject.pages.HomePage;
+import com.cedaniel200.ejercicio2.pageobject.pages.HorizontalMenu;
+import com.cedaniel200.ejercicio2.pageobject.pages.VerticalMenu;
+import com.cedaniel200.ejercicio2.pageobject.task.FlightFinder;
 import com.cedaniel200.ejercicio2.pageobject.task.Register;
 import com.cedaniel200.ejercicio2.pageobject.task.Signon;
 import cucumber.api.PendingException;
@@ -29,7 +33,7 @@ public class BayFlightStepDefinitions {
     @Steps
     Signon signon;
     @Steps
-    FlightFinderPage flightFinderPage;
+    FlightFinder flightFinder;
     // TODO agregar las tasks o pages necesarias
     @Steps
     FlightConfirmationPage flightConfirmationPage;
@@ -54,6 +58,7 @@ public class BayFlightStepDefinitions {
     @And("^I look for the flight$")
     public void lookForTheFlight() {
         verticalMenu.clickOnFlights();
+        flightFinder.searchFlights();
         // TODO terminar la implementación
     }
 
