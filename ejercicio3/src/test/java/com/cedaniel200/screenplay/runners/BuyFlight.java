@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(features = "src/test/resources/features/buy_flight.feature",
-        glue = "com.cedaniel200.ejercicio2.screenplay.stepdefinitions",
+        glue = "com.cedaniel200.screenplay.stepdefinitions",
         snippets = SnippetType.CAMELCASE)
 public class BuyFlight {
 }
