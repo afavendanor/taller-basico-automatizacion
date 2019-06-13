@@ -22,9 +22,9 @@ public class UserBuilder {
         return this;
     }
 
-    public UserBuilder withPassword(String password) {
+    public User andPassword(String password) {
         this.password = password;
-        return this;
+        return build();
     }
 
     public User build(){
