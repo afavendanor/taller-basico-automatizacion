@@ -7,6 +7,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 
 import static com.cedaniel200.screenplay.userinterface.HorizontalMenu.REGISTER_OPTION;
+import static com.cedaniel200.screenplay.userinterface.HorizontalMenu.SIGN_OFF_OPTION;
 import static com.cedaniel200.screenplay.userinterface.RegisterPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
@@ -33,7 +34,8 @@ public class Register implements Task {
                 Enter.theValue(user.name()).into(USERNAME),
                 Enter.theValue(user.password()).into(PASSWORD),
                 Enter.theValue(user.password()).into(CONFIRM_PASSWORD),
-                Click.on(REGISTER)
+                Click.on(REGISTER),
+                Click.on(SIGN_OFF_OPTION)
         );
     }
 }
